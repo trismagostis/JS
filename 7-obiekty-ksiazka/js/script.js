@@ -6,10 +6,10 @@ class Book {
     }
     describeBook() {
         if(this.red==true){
-        console.log(`ksiązka ma tytuł ${this.title} autorem jest ${this.autor} i została przeczytana}`)
+        return `ksiązka ma tytuł ${this.title} autorem jest ${this.autor} i została przeczytana}`;
     }
     else {
-        console.log(`ksiązka ma tytuł ${this.title} autorem jest ${this.autor} i nie została przeczytana}`) 
+        return (`ksiązka ma tytuł ${this.title} autorem jest ${this.autor} i nie została przeczytana}`); 
     }
 }
 }
@@ -23,7 +23,7 @@ let ksiazki=new Array(ksiazka1,ksiazka2,ksiazka3);
 function numberRed(tab)  {
     let red=0; 
     tab.forEach(element =>
-         {element.describeBook();if (element.red=true) {red++};});
+         {console.log(element.describeBook());if (element.red==true) {red++};});
     return red; 
 }; 
 console.log(numberRed(ksiazki));
